@@ -13,6 +13,7 @@ namespace Vidly.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+        public DateTime? Birthdate { get; set; }
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }  //Navigation type, from one class to another, no need to reference to id
         public byte MembershipTypeId { get; set; }  //by naming convention treats it as a foreign key

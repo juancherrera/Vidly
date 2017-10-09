@@ -205,8 +205,41 @@
     <Compile Include="Migrations\201710090211234_Update Memberships.Designer.cs">
       <DependentUpon>201710090211234_Update Memberships.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710090356091_AddedBirthdateField.cs" />
+    <Compile Include="Migrations\201710090356091_AddedBirthdateField.Designer.cs">
+      <DependentUpon>201710090356091_AddedBirthdateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090357583_AddedBirthdateField1.cs" />
+    <Compile Include="Migrations\201710090357583_AddedBirthdateField1.Designer.cs">
+      <DependentUpon>201710090357583_AddedBirthdateField1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090409593_UpdatedBirthdateField.cs" />
+    <Compile Include="Migrations\201710090409593_UpdatedBirthdateField.Designer.cs">
+      <DependentUpon>201710090409593_UpdatedBirthdateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090411374_UpdatedMembershipTypes.cs" />
+    <Compile Include="Migrations\201710090411374_UpdatedMembershipTypes.Designer.cs">
+      <DependentUpon>201710090411374_UpdatedMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090432009_ChangedCustomerBirthdateCase.cs" />
+    <Compile Include="Migrations\201710090432009_ChangedCustomerBirthdateCase.Designer.cs">
+      <DependentUpon>201710090432009_ChangedCustomerBirthdateCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090437521_DropBirthdateColumn.cs" />
+    <Compile Include="Migrations\201710090437521_DropBirthdateColumn.Designer.cs">
+      <DependentUpon>201710090437521_DropBirthdateColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090439017_ReimplementedBirthdateColumn.cs" />
+    <Compile Include="Migrations\201710090439017_ReimplementedBirthdateColumn.Designer.cs">
+      <DependentUpon>201710090439017_ReimplementedBirthdateColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090440595_AddingJohnSmithBirthdate.cs" />
+    <Compile Include="Migrations\201710090440595_AddingJohnSmithBirthdate.Designer.cs">
+      <DependentUpon>201710090440595_AddingJohnSmithBirthdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -294,6 +327,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710090211234_Update Memberships.resx">
       <DependentUpon>201710090211234_Update Memberships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090356091_AddedBirthdateField.resx">
+      <DependentUpon>201710090356091_AddedBirthdateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090357583_AddedBirthdateField1.resx">
+      <DependentUpon>201710090357583_AddedBirthdateField1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090409593_UpdatedBirthdateField.resx">
+      <DependentUpon>201710090409593_UpdatedBirthdateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090411374_UpdatedMembershipTypes.resx">
+      <DependentUpon>201710090411374_UpdatedMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090432009_ChangedCustomerBirthdateCase.resx">
+      <DependentUpon>201710090432009_ChangedCustomerBirthdateCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090437521_DropBirthdateColumn.resx">
+      <DependentUpon>201710090437521_DropBirthdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090439017_ReimplementedBirthdateColumn.resx">
+      <DependentUpon>201710090439017_ReimplementedBirthdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090440595_AddingJohnSmithBirthdate.resx">
+      <DependentUpon>201710090440595_AddingJohnSmithBirthdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

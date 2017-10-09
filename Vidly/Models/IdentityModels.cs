@@ -21,6 +21,7 @@ namespace Vidly.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Movie> Movies { get; set; }   //if the movie class is not referenced then it will not be included in migration
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
