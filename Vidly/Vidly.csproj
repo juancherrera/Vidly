@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201710080627324_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201710080627324_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710090211234_Update Memberships.cs" />
+    <Compile Include="Migrations\201710090211234_Update Memberships.Designer.cs">
+      <DependentUpon>201710090211234_Update Memberships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -287,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710080627324_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201710080627324_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090211234_Update Memberships.resx">
+      <DependentUpon>201710090211234_Update Memberships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
