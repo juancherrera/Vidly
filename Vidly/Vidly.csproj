@@ -237,6 +237,22 @@
     <Compile Include="Migrations\201710090440595_AddingJohnSmithBirthdate.Designer.cs">
       <DependentUpon>201710090440595_AddingJohnSmithBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710090525108_AddedGenreTable.cs" />
+    <Compile Include="Migrations\201710090525108_AddedGenreTable.Designer.cs">
+      <DependentUpon>201710090525108_AddedGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090527329_AddedGenreTypes.cs" />
+    <Compile Include="Migrations\201710090527329_AddedGenreTypes.Designer.cs">
+      <DependentUpon>201710090527329_AddedGenreTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090540049_ModifiedNameColumnforGenres.cs" />
+    <Compile Include="Migrations\201710090540049_ModifiedNameColumnforGenres.Designer.cs">
+      <DependentUpon>201710090540049_ModifiedNameColumnforGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090541056_PopulatedGenresTable.cs" />
+    <Compile Include="Migrations\201710090541056_PopulatedGenresTable.Designer.cs">
+      <DependentUpon>201710090541056_PopulatedGenresTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -351,6 +367,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710090440595_AddingJohnSmithBirthdate.resx">
       <DependentUpon>201710090440595_AddingJohnSmithBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090525108_AddedGenreTable.resx">
+      <DependentUpon>201710090525108_AddedGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090527329_AddedGenreTypes.resx">
+      <DependentUpon>201710090527329_AddedGenreTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090540049_ModifiedNameColumnforGenres.resx">
+      <DependentUpon>201710090540049_ModifiedNameColumnforGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090541056_PopulatedGenresTable.resx">
+      <DependentUpon>201710090541056_PopulatedGenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
