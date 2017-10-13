@@ -10,14 +10,15 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
         [Required]
+        [StringLength(255)]
         public string Name { get; set; }
+
         [Required]
-        public DateTime ReleasedDate { get; set; }
-        [Required]
-        public DateTime AddedDate { get; set; }
-        [Required]
-        public int NumberInStock { get; set; }
         public Genre Genre { get; set; }  //Navigation type, from one class to another, no need to reference to id
         public byte GenreId { get; set; }  //by naming convention treats it as a foreign key
+
+        public DateTime ReleasedDate { get; set; }
+        public DateTime AddedDate { get; set; }
+        public int NumberInStock { get; set; }
     }
 }
