@@ -9,6 +9,6 @@ namespace Vidly.ViewModels
     public class NewCustomerViewModel
     {
         public IEnumerable<MembershipType> MembershipTypes { get; set; }   //using IEnumerable when no actions are needed in the hash
-        public Customer Customer { get; set; } 
+        public Customer Customer { get; set; }
     }
 }
