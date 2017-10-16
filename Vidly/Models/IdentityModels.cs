@@ -23,6 +23,7 @@ namespace Vidly.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }   //if the movie class is not referenced then it will not be included in migration
         public DbSet<MembershipType> MembershipTypes { get; set; }
+        public DbSet<Genres> Genres { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

@@ -6,11 +6,12 @@
 
 <h2>New Customer</h2>
 
-@using (Html.BeginForm("Create", "Customers"))    //this code renders the <form></form> tags
+@using (Html.BeginForm("Save", "Customers"))    //this code renders the <form></form> tags
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)  @* Sets/uses a lambda expression Name for the label.  uses "m" as in model as variable *@
         @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })   @*the "@class" adds the length required in input field*@
+        @*@Html.ValidationMessageFor (m => m.Customer.Name)*@ 
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Birthdate)  @* Sets/uses a lambda expression Name for the label.  uses "m" as in model as variable *@
@@ -25,6 +26,6 @@
             @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to Newsletter?
         </label>
     </div>
-
+    @Html.HiddenFor(m => m.Customer.Id)
     <button type = "submit" class = "btn btn-primary">Save</button>  //The "btn-primary" indicates this is the primary submission button
 }

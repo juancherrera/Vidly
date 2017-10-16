@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Vidly.Models
 {
-    public class Genre
+    public class Genres
     {
         public byte Id { get; set; }
         [Required]

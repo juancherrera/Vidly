@@ -37,11 +37,32 @@ namespace Vidly.Controllers
 
         [HttpPost]
         // public ActionResult Create(NewCustomerViewModel viewModel)   << by doing this (NewCustomerViewModel viewModel) it will automatically bind (model bind) the result/type to the view model
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new CustomerFormViewModel
+            //    {
+            //        Customer = customer,
+            //        MembershipTypes = _context.MembershipTypes.ToList()
+            //    };
+
+            //    return View("CustomerForm", viewModel);
+            //}
+
+            if (customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
+
             _context.SaveChanges();
-            return RedirectToAction("Index", "Customer");
+            return RedirectToAction("Index", "Customers");
         }
 
         // GET: Customer
