@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Vidly.Models;
 
-namespace Vidly.Models
+namespace Vidly.Dtos
 {
-    public class Movie
+    public class MovieDto
     {
         public int Id { get; set; }
 
@@ -14,18 +15,12 @@ namespace Vidly.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        public Genres Genre { get; set; }  //Navigation type, from one class to another, no need to reference to id
-
-        [Display(Name = "Genre")]
-        [Required]
         public byte GenreId { get; set; }  //by naming convention treats it as a foreign key
 
-        [Display(Name = "Released Date")]
         public DateTime ReleasedDate { get; set; }
 
         public DateTime AddedDate { get; set; }
 
-        [Display(Name = "Number in Stock")]
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
     }

@@ -30,25 +30,27 @@ namespace Vidly.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),   //Must initialized so it doesnt display an error message when no input is entered in the form as it will have a value of zero
                 MembershipTypes = membershipTypes
             };
             return View("CustomerForm", viewModel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         // public ActionResult Create(NewCustomerViewModel viewModel)   << by doing this (NewCustomerViewModel viewModel) it will automatically bind (model bind) the result/type to the view model
         public ActionResult Save(Customer customer)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    var viewModel = new CustomerFormViewModel
-            //    {
-            //        Customer = customer,
-            //        MembershipTypes = _context.MembershipTypes.ToList()
-            //    };
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
 
-            //    return View("CustomerForm", viewModel);
-            //}
+                return View("CustomerForm", viewModel);
+            }
 
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
