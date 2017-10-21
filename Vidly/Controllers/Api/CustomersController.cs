@@ -1,10 +1,10 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using AutoMapper;
 using Vidly.Dtos;
 using Vidly.Models;
 
@@ -20,9 +20,15 @@ namespace Vidly.Controllers.Api
         }
 
         // GET /api/customers   - will return ALL customers
-        public IEnumerable<CustomerDto> GetCustomers()
+        public IHttpActionResult GetCustomers()
         {
-            return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDto>);     //The parenthesis in (Mapper.Map<Customer,CustomerDto>()); not needed as we are not calling a method, only referencing it
+            //return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDto>);     //The parenthesis in (Mapper.Map<Customer,CustomerDto>()); not needed as we are not calling a method, only referencing it
+            var customerDtos = _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
+
+            return Ok(customerDtos);
         }
 
         //get a single customer based on their id
